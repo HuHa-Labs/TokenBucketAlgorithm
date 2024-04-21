@@ -36,3 +36,15 @@ func (tb TokenBucketImpl) tryConsumeMultipleToken(numToken uint32) bool {
 
 func (tb TokenBucketImpl) refill(numToken uint32){
 }
+
+func (tb TokenBucketImpl) getUntilNextRefill(timeUnit string) uint32{
+	return 0
+}
+
+func (tb TokenBucketImpl) getSize() uint32{
+	return tb.size
+}
+
+func (tb TokenBucketImpl) getCapacity() uint32{
+	return tb.capacity
+}
