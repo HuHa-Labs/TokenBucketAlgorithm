@@ -11,3 +11,9 @@ type TokenBucket interface {
 	getCapacity() uint32
 }
 
+type TokenBucketImpl struct {
+	capacity uint32
+	size uint32
+	refillStrategy RefillStrategy
+	sleepStrategy SleepStrategy
+}
