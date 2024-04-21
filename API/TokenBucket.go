@@ -17,3 +17,22 @@ type TokenBucketImpl struct {
 	refillStrategy RefillStrategy
 	sleepStrategy SleepStrategy
 }
+
+func (tb TokenBucketImpl) ConsumeMultipleToken(numToken uint32) bool{
+	return false
+}
+
+func (tb TokenBucketImpl) ConsumeOneToken() bool {
+	return false
+}
+
+func (tb TokenBucketImpl) tryConsumeOneToken() bool {
+	return false
+}
+
+func (tb TokenBucketImpl) tryConsumeMultipleToken(numToken uint32) bool {
+	return false
+}
+
+func (tb TokenBucketImpl) refill(numToken uint32){
+}
