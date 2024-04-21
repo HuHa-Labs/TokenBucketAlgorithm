@@ -6,7 +6,7 @@ type TokenBucket interface {
 	tryConsumeOneToken() bool
 	tryConsumeMultipleToken(numToken uint32)
 	refill(numToken uint32)
-	getUntilNextRefill() uint32
+	getUntilNextRefill(timeUnit string) uint32
 	getSize() uint32
 	getCapacity() uint32
 }
