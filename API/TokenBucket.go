@@ -14,8 +14,8 @@ type TokenBucket interface {
 type TokenBucketImpl struct {
 	capacity uint32
 	size uint32
-	refillStrategy RefillStrategy
-	sleepStrategy SleepStrategy
+	// refillStrategy *RefillStrategy
+	// sleepStrategy *SleepStrategy
 }
 
 func (tb TokenBucketImpl) ConsumeMultipleToken(numToken uint32) bool{
