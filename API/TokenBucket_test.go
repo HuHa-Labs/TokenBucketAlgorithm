@@ -12,3 +12,10 @@ func TestTokenBucketImplGetSize(t *testing.T) {
 		t.Errorf("Expected 10, got %d", tb.getSize())
 	}
 }
+
+func TestTokenBucketImplGetCapacity(t *testing.T) {
+	tb := TokenBucketImpl{capacity: 10, size: 10}
+	if tb.getCapacity() != 10 {
+		t.Errorf("Expected 10, got %d", tb.getCapacity())
+	}
+}
