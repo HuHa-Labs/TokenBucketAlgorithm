@@ -27,7 +27,7 @@ func (tb TokenBucketImpl) ConsumeOneToken() bool {
 }
 
 func (tb TokenBucketImpl) tryConsumeOneToken() bool {
-	return false
+	return tb.tryConsumeMultipleToken(1)
 }
 
 func (tb TokenBucketImpl) tryConsumeMultipleToken(numToken uint32) bool {
