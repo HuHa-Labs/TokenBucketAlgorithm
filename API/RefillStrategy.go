@@ -6,6 +6,10 @@ type RefillStrategy interface {
 }
 
 type RefillStrategyImpl struct {
+	numTokensPerPeriod uint32
+	periodDurationInNanos uint32
+	lastRefillTime uint32
+	nextRefillTime uint32
 }
 
 func (rs RefillStrategyImpl) Refill() uint32 {
